@@ -11,11 +11,11 @@ services:
     volumes:
       - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d:ro
     restart: unless-stopped
-  # app:
-  #   image: app
-  #   build: .
-  #   ports:
-  #     - '9000:9000'
-  #   depends_on:
-  #     - db
-  #   restart: unless-stopped
+  app:
+    image: app
+    build: .
+    ports:
+      - '9000:9000'
+    depends_on:
+      - db
+    restart: unless-stopped
