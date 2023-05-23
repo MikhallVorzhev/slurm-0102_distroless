@@ -19,4 +19,4 @@ RUN go build -o /go/bin/app.bin cmd/main.go
 # Now copy it into our base image.
 FROM gcr.io/distroless/base-debian11
 COPY --from=build /go/bin/app /
-CMD ["/app.bin"]
+CMD ["/app"]
